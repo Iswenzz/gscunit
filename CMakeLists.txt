@@ -15,19 +15,13 @@ include(CPack)
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
-# Tests
-include(CTest)
-add_executable(gscunit.Tests)
-target_link_libraries(gscunit.Tests PUBLIC ${CONAN_LIBS})
-add_test(NAME Tests COMMAND gscunit.Tests)
-
 # Build
 add_executable(gscunit)
 add_subdirectory(runtime)
 add_subdirectory(src)
 target_include_directories(gscunit PUBLIC ..)
 target_link_directories(gscunit PUBLIC ..)
-target_link_libraries(gscunit PUBLIC Resources.Runtime)
+target_link_libraries(gscunit PUBLIC ${CONAN_LIBS} Resources.Runtime)
 
 # Pack
 install(TARGETS gscunit LIBRARY DESTINATION lib)

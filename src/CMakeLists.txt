@@ -1,5 +1,3 @@
-add_subdirectory(__test__)
-
 target_include_directories(gscunit PUBLIC .)
 target_sources(gscunit PRIVATE gscunit.cpp)
 get_target_property(SOURCES gscunit SOURCES)
