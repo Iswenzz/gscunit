@@ -1,14 +1,12 @@
+#!/usr/bin/env node
+
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 import { exit } from "process";
-import { execa } from "execa";
+import execa from "execa";
 import fs from "fs/promises";
 import path from "path";
 import ini from "ini";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 /**
  * Install the default CoD4 runtime if needed.
@@ -33,6 +31,8 @@ const run = async (target: string, location: string, args: string[]): Promise<nu
 	const command = path.join(location, target);
 	const proc = await execa(command, args, {
 		cwd: location,
+		stdin: "ignore",
+		stdout: "ignore",
 		stderr: "inherit",
 		windowsVerbatimArguments: true
 	});

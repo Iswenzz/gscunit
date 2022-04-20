@@ -1,11 +1,13 @@
 import buildTsc from "@izui/scripts/webpack/buildTsc";
 
-buildTsc({
+export default () => buildTsc({
 	packageJsonPath: require.resolve("../package.json"),
 	outputPath: "build",
 	copyTo: [
-		{ from: "runtime" },
+		{ from: "runtime", to: "runtime" },
 		{ from: "LICENSE" },
-		{ from: "README.md" }
+		{ from: "README.md" },
+		{ from: "yarn.lock" },
+		{ from: ".npmignore" }
 	]
 });
