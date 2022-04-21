@@ -4,7 +4,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/iswenzz/gsclib/badge)](https://www.codefactor.io/repository/github/iswenzz/gscunit)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-``gscunit`` is a testing library for GSC as well as a CLI to run CoD4 binary and run tests.
+A testing library for GSC, as well as a CLI to run CoD4 binary and run unit tests.
 
 ![](https://i.imgur.com/CiKF8pv.png)
 
