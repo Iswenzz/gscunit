@@ -3,6 +3,7 @@
 gscunitEnv()
 {
 	level.gscunit = spawnStruct();
+	level.gscunit.enabled = getDvarInt("gscunit");
 	level.gscunit.debug = getDvarInt("gscunit_debug");
 	level.gscunit.clock = undefined;
 	level.gscunit.fail = false;
@@ -12,6 +13,9 @@ gscunitEnv()
 
 it(callback, name, beforeCallback, afterCallback)
 {
+	if (!level.gscunit.enabled)
+		return;
+
 	// Before
 	sysPrint("^2(            )^0 %s ^7", name);
 	if (isDefined(beforeCallback) && ![[beforeCallback]]())
@@ -50,6 +54,7 @@ it(callback, name, beforeCallback, afterCallback)
 
 suite(name)
 {
+	if (!level.gscunit.enabled) return;
     sysPrintLn("^2(============) %s^7", name);
 }
 
@@ -65,6 +70,9 @@ stopClock(clock)
 
 summarize(exit)
 {
+	if (!level.gscunit.enabled)
+		return;
+
 	time = stopClock(level.gscunit.clock);
 	color = Ternary(level.gscunit.count_fail > 0, "^1", "^2");
 	sysPrintLn("\n%sPassed: %d Failed: %d (%dms)\n", color,

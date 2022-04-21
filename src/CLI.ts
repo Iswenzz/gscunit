@@ -27,7 +27,7 @@ const installRuntime = async (location: string): Promise<void> =>
  */
 const run = async (target: string, location: string, args: string[]): Promise<number> =>
 {
-	args.push("+map mp_gscunit");
+	args.push("+map_rotate", "+set gscunit 1");
 	const command = path.join(location, target);
 	const proc = await execa(command, args, {
 		cwd: location,
