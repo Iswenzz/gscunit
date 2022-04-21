@@ -6,6 +6,8 @@
 
 ``gscunit`` is a testing library for GSC as well as a CLI to run CoD4 binary and run tests.
 
+![](https://i.imgur.com/CiKF8pv.png)
+
 ## Instructions
 Install [gsclib](https://github.com/Iswenzz/gsclib) and it's pre-requisites and copy the libs directory to your mod folder.
 
