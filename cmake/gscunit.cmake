@@ -1,4 +1,5 @@
 function(add_test_gscunit)
+	set(GSCUNIT gscunit)
 	set(args NAME PROFILE)
 	cmake_parse_arguments(ARG "" "${args}" "" "${ARGN}")
 
@@ -9,7 +10,11 @@ function(add_test_gscunit)
 		message(FATAL_ERROR "add_test_gscunit() requires the PROFILE argument.")
 	endif()
 
+	if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+		set(EXT ".cmd")
+	endif()
+
 	add_test(
 		NAME ${ARG_NAME}
-		COMMAND gscunit --profile "${ARG_PROFILE}")
+		COMMAND ${GSCUNIT}${EXT} --profile "${ARG_PROFILE}")
 endfunction()
