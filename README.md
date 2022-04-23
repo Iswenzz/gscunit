@@ -1,8 +1,8 @@
 # gscunit
 
-[![Build status](https://ci.appveyor.com/api/projects/status/wb0m9puc58f5d74w?svg=true)](https://ci.appveyor.com/project/Iswenzz/gscunit)
-[![CodeFactor](https://www.codefactor.io/repository/github/iswenzz/gsclib/badge)](https://www.codefactor.io/repository/github/iswenzz/gscunit)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Checks](https://img.shields.io/github/checks-status/Iswenzz/gscunit/master?logo=github)](https://github.com/Iswenzz/gscunit/actions)
+[![CodeFactor](https://img.shields.io/codefactor/grade/github/Iswenzz/gscunit?label=codefactor&logo=codefactor)](https://www.codefactor.io/repository/github/iswenzz/gscunit)
+[![License](https://img.shields.io/github/license/Iswenzz/gscunit?color=blue&logo=gitbook&logoColor=white)](https://github.com/Iswenzz/gscunit/blob/master/LICENSE)
 
 A testing library for GSC, as well as a CLI to run CoD4 binary and run unit tests.
 
