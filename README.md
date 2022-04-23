@@ -54,6 +54,7 @@ gscunit settings can be set with a profile file (.ini)
 [CLI]
 location=
 target=
+args=
 ```
 
 ## [Download](https://github.com/Iswenzz/gscunit/releases)
