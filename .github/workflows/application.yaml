@@ -1,0 +1,46 @@
+name: Application
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Yarn Berry
+      run: |
+        corepack enable
+        yarn set version stable
+        yarn config set nodeLinker node-modules
+        yarn plugin import workspace-tools
+        yarn plugin import version
+
+    - name: Build
+      run: |
+        yarn --no-immutable
+        yarn build
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Yarn Berry
+      run: |
+        corepack enable
+        yarn set version stable
+        yarn config set nodeLinker node-modules
+        yarn plugin import workspace-tools
+        yarn plugin import version
+
+    - name: Lint
+      run: |
+        yarn --no-immutable
+        yarn lint
