@@ -1,6 +1,5 @@
 # gscunit
 
-[![Checks](https://img.shields.io/github/checks-status/Iswenzz/gscunit/master?logo=github)](https://github.com/Iswenzz/gscunit/actions)
 [![CodeFactor](https://img.shields.io/codefactor/grade/github/Iswenzz/gscunit?label=codefactor&logo=codefactor)](https://www.codefactor.io/repository/github/iswenzz/gscunit)
 [![License](https://img.shields.io/github/license/Iswenzz/gscunit?color=blue&logo=gitbook&logoColor=white)](https://github.com/Iswenzz/gscunit/blob/master/LICENSE)
 
