@@ -3,9 +3,9 @@
 [![CodeFactor](https://img.shields.io/codefactor/grade/github/Iswenzz/gscunit?label=codefactor&logo=codefactor)](https://www.codefactor.io/repository/github/iswenzz/gscunit)
 [![License](https://img.shields.io/github/license/Iswenzz/gscunit?color=blue&logo=gitbook&logoColor=white)](https://github.com/Iswenzz/gscunit/blob/master/LICENSE)
 
-A testing library for GSC, as well as a CLI to run CoD4 binary and run unit tests.
+![](https://i.imgur.com/qLLn0vR.png)
 
-![](https://i.imgur.com/CiKF8pv.png)
+A testing library for GSC, as well as a CLI to run CoD4 binary and run unit tests.
 
 ## Instructions
 Install [gsclib](https://github.com/Iswenzz/gsclib) and it's pre-requisites and copy the libs directory to your mod folder.
