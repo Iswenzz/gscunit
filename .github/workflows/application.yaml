@@ -15,5 +15,5 @@ jobs:
 
     - name: Build
       run: |
-        yarn
+        yarn --no-immutable
         yarn build
