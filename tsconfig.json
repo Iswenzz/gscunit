@@ -1,18 +1,16 @@
 {
 	"compilerOptions": {
-		"target": "esnext",
-		"lib": ["esnext"],
-		"allowJs": true,
-		"skipLibCheck": true,
-		"esModuleInterop": true,
-		"outDir": "build",
-		"rootDir": ".",
 		"allowSyntheticDefaultImports": true,
-		"strict": true,
+		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
-		"module": "commonjs",
-		"moduleResolution": "node",
-		"resolveJsonModule": true
+		"lib": ["ESNext"],
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"outDir": "build",
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"target": "ESNext"
 	},
 	"include": ["src"]
 }

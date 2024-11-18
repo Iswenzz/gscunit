@@ -5,15 +5,15 @@ node_modules/*
 coverage/*
 build/*
 
-.env.development.local
-.env.test.local
-.env.production.local
-
-.pnp.*
-.yarn/
-.yarnrc.*
+.yarn/*
+!.yarn/cache
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
