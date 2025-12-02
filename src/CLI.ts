@@ -12,23 +12,12 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-/**
- * Install the default CoD4 runtime if needed.
- * @param location - The CoD4 location.
- */
 const installRuntime = async (location: string): Promise<void> =>
 	fs.cp(path.join(__dirname, "../runtime"), location, {
 		recursive: true,
 		force: false
 	});
 
-/**
- * Run the CoD4 binary.
- * @param target - The CoD4 binary name.
- * @param location - The CoD4 directory path.
- * @param args - The CoD4 arguments.
- * @returns
- */
 const run = async (target: string, location: string, args: string[]): Promise<number> => {
 	args.push("+map_rotate", "+set gscunit 1");
 	const command = path.join(location, target);
@@ -42,11 +31,6 @@ const run = async (target: string, location: string, args: string[]): Promise<nu
 	return proc.exitCode || 0;
 };
 
-/**
- * Read a INI profile.
- * @param path - The INI filepath.
- * @returns
- */
 const readProfile = async (path: string): Promise<string[]> => {
 	await fs.access(path);
 	const config = ini.parse(await fs.readFile(path, "utf-8"));
@@ -56,11 +40,6 @@ const readProfile = async (path: string): Promise<string[]> => {
 		.map(([key, value]) => `--${key}=${value}`);
 };
 
-/**
- * Parse the CLI arguments.
- * @param args - The CLI arguments.
- * @returns
- */
 const parseArgs = (args: string[]) =>
 	yargs(args)
 		.options({
@@ -98,9 +77,6 @@ const parseArgs = (args: string[]) =>
 		.help()
 		.parse();
 
-/**
- * gscunit entry point.
- */
 const main = async (): Promise<void> => {
 	console.log("A unit testing framework for GSC\n");
 	let options = await parseArgs(hideBin(process.argv));
